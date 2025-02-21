@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "start:serv": "NODE_ENV=production node server.mjs",
-    "start:prod": "NODE_ENV=production node server.mjs next start"
+    "start:prod": "NODE_ENV=production node server.mjs"
   },
   "dependencies": {
     "@types/cors": "^2.8.17",

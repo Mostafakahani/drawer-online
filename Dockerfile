@@ -9,7 +9,7 @@ RUN npm install -f
 
 RUN npm run build
 RUN npm run start:prod
-EXPOSE 1213
+EXPOSE 3010
 CMD ["npm", "run", "start:prod"]
 # CMD ["npm", "start"]
 

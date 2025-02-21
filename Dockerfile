@@ -4,14 +4,24 @@ WORKDIR /app
 
 COPY . .
 
+# تنظیم رجیستری NPM به npmmirror.com
 RUN npm config set registry https://registry.npmmirror.com
 
+# نصب وابستگی‌ها با استفاده از --force برای غیرفعال کردن محافظت‌های توصیه‌شده
 RUN npm install -f
 
+# ساخت پروژه
 RUN npm run build
+
+# شروع پروژه در حالت تولید
 RUN npm run start:prod
+
+# نمایان‌سازی پورت 3010
 EXPOSE 3010
+
+# اجرای پروژه در حالت تولید
 CMD ["npm", "run", "start:prod"]
+
 # CMD ["npm", "start"]
 
 # FROM node:20-alpine AS builder

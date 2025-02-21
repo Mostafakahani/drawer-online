@@ -14,7 +14,7 @@ RUN npm install -f
 RUN npm run build
 
 # شروع پروژه در حالت تولید
-RUN npm run start:prod
+# RUN npm run start:prod
 
 # نمایان‌سازی پورت 3010
 EXPOSE 3010

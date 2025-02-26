@@ -1,6 +1,6 @@
 FROM node:20-alpine AS builder
 
-WORKDIR /
+WORKDIR /app
 
 COPY package.json package-lock.json ./
 RUN npm install -f
@@ -14,9 +14,9 @@ RUN npm run build
 
 FROM node:20-alpine
 
-WORKDIR /app
+WORKDIR /
 
-COPY --from=builder /app ./
+COPY --from=builder / ./
 
 ENV NODE_ENV=production
 
